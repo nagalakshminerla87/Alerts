@@ -8,7 +8,7 @@ import java.util.List;
 
 @Entity
 @Data
-public class Alerts {
+public class Alert {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -24,5 +24,10 @@ public class Alerts {
     private String assignedAnalyst;
 
     @ElementCollection
+    @CollectionTable(
+            name = "alert_flagged_rules",
+            joinColumns = @JoinColumn(name = "alert_id")
+    )
+    @Column(name = "flagged_rules")
     private List<String> flaggedRules;
 }

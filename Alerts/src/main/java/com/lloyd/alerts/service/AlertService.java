@@ -1,7 +1,7 @@
 package com.lloyd.alerts.service;
 
 import com.lloyd.alerts.dto.AlertRequest;
-import com.lloyd.alerts.entity.Alerts;
+import com.lloyd.alerts.entity.Alert;
 import com.lloyd.alerts.repository.AlertRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.BeanUtils;
@@ -20,12 +20,12 @@ public class AlertService {
     private final AlertRepository repo;
     private final KafkaTemplate<String, Object> kafkaTemplate;
 
-    public Alerts create(AlertRequest req) {
-        Alerts alert = new Alerts();
+    public Alert create(AlertRequest req) {
+        Alert alert = new Alert();
         BeanUtils.copyProperties(req, alert);
         alert.setStatus("NEW");
 
-        Alerts saved = repo.save(alert);
+        Alert saved = repo.save(alert);
 
         // Kafka event
         kafkaTemplate.send("alert-events", saved);
@@ -33,17 +33,17 @@ public class AlertService {
         return saved;
     }
 
-    public Page<Alerts> getAll(Specification<Alerts> spec, Pageable pageable) {
+    public Page<Alert> getAll(Specification<Alert> spec, Pageable pageable) {
         return repo.findAll(spec, pageable);
     }
 
-    public Alerts getById(String id) {
+    public Alert getById(String id) {
         return repo.findById(id)
                 .orElseThrow(() -> new RuntimeException("Alert not found"));
     }
 
     public void updateStatus(String id, String newStatus) {
-        Alerts alert = getById(id);
+        Alert alert = getById(id);
 
         List<String> valid = List.of("NEW","UNDER_REVIEW","ESCALATED","CLOSED");
 

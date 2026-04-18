@@ -1,7 +1,7 @@
 package com.lloyd.alerts.controller;
 
 import com.lloyd.alerts.dto.AlertRequest;
-import com.lloyd.alerts.entity.Alerts;
+import com.lloyd.alerts.entity.Alert;
 import com.lloyd.alerts.service.AlertService;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.validation.Valid;
@@ -28,12 +28,12 @@ public class AlertsController {
     }
 
     @GetMapping
-    public Page<Alerts> getAll(
+    public Page<Alert> getAll(
             @RequestParam(required = false) String status,
             @RequestParam(required = false) String riskBand,
             Pageable pageable) {
 
-        Specification<Alerts> spec = (root, q, cb) -> {
+        Specification<Alert> spec = (root, q, cb) -> {
             List<Predicate> p = new ArrayList<>();
             if (status != null) p.add(cb.equal(root.get("status"), status));
             if (riskBand != null) p.add(cb.equal(root.get("riskBand"), riskBand));
@@ -44,7 +44,7 @@ public class AlertsController {
     }
 
     @GetMapping("/{id}")
-    public Alerts getById(@PathVariable String id) {
+    public Alert getById(@PathVariable String id) {
         return service.getById(id);
     }
 
