@@ -4,10 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CaseManagementApplication {
-
+public class CaseServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(CaseManagementApplication.class, args);
+        SpringApplication.run(CaseServiceApplication.class, args);
     }
-
 }
