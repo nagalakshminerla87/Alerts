@@ -1,6 +1,7 @@
-package com.lloyd.casemanagement;
+package com.lloyd.casemanagement.repository;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.lloyd.casemanagement.entity.CaseEntity;
+
 public interface CaseRepository extends JpaRepository<CaseEntity, String> {
 }

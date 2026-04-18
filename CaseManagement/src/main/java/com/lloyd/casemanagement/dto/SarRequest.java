@@ -1,19 +1,15 @@
-package com.lloyd.casemanagement;
+package com.lloyd.casemanagement.dto;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+import java.util.List;
+
 @Data
-public class CaseRequest {
-
-    @NotEmpty
-    private List<String> linkedAlertIds;
+public class SarRequest {
 
     @NotBlank
-    private String customerId;
+    private String decision;
 
     @NotBlank
-    private String assignedAnalyst;
-
-    @Pattern(regexp = "HIGH|MEDIUM|LOW")
-    private String priority;
+    private String rationale;
 }

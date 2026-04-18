@@ -1,7 +1,12 @@
-package com.lloyd.casemanagement;
+package com.lloyd.casemanagement.exception;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
+import java.util.List;
+import java.util.Map;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

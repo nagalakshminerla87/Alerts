@@ -1,7 +1,9 @@
-package com.lloyd.casemanagement;
+package com.lloyd.casemanagement.dto;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import lombok.Data;
+
 @Data
 public class NoteRequest {
 

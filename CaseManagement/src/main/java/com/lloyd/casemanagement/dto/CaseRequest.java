@@ -1,7 +1,12 @@
-package com.lloyd.casemanagement;
+package com.lloyd.casemanagement.dto;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
+import lombok.Data;
+
+import java.util.List;
+
 @Data
 public class CaseRequest {
 
