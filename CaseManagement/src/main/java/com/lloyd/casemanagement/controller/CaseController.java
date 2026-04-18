@@ -1,7 +1,16 @@
-package com.lloyd.casemanagement;
+package com.lloyd.casemanagement.controller;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import com.lloyd.casemanagement.entity.CaseEntity;
+import com.lloyd.casemanagement.dto.CaseRequest;
+import com.lloyd.casemanagement.dto.NoteRequest;
+import com.lloyd.casemanagement.dto.SarRequest;
+import com.lloyd.casemanagement.service.CaseService;
+
 @RestController
 @RequestMapping("/api/cases")
 @RequiredArgsConstructor

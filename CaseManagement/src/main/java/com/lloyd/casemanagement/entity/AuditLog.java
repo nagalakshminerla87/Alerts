@@ -1,7 +1,12 @@
-package com.lloyd.casemanagement;
+package com.lloyd.casemanagement.entity;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.Data;
+import java.time.LocalDateTime;
+
 @Entity
 @Data
 public class AuditLog {

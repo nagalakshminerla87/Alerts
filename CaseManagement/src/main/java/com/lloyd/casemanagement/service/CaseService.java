@@ -1,7 +1,18 @@
-package com.lloyd.casemanagement;
+package com.lloyd.casemanagement.service;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.beans.BeanUtils;
+import java.time.LocalDateTime;
+import java.util.List;
+import com.lloyd.casemanagement.entity.CaseEntity;
+import com.lloyd.casemanagement.entity.Note;
+import com.lloyd.casemanagement.entity.AuditLog;
+import com.lloyd.casemanagement.dto.CaseRequest;
+import com.lloyd.casemanagement.dto.NoteRequest;
+import com.lloyd.casemanagement.dto.SarRequest;
+import com.lloyd.casemanagement.repository.CaseRepository;
+
 @Service
 @RequiredArgsConstructor
 public class CaseService {
