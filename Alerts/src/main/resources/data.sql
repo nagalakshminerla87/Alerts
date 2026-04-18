@@ -1,0 +1,22 @@
+INSERT INTO alerts VALUES
+                      ('A1','C101','STRUCTURING','HIGH',12000,'GBP','2026-04-18 10:00:00','NEW','John'),
+                      ('A2','C102','APP_SCAM','MEDIUM',5000,'GBP','2026-04-17 09:00:00','UNDER_REVIEW','Alice'),
+                      ('A3','C103','SANCTIONS_HIT','HIGH',75000,'GBP','2026-04-16 08:00:00','ESCALATED','Bob'),
+                      ('A4','C104','UNUSUAL_ACTIVITY','LOW',800,'GBP','2026-04-15 07:00:00','CLOSED','Eve'),
+                      ('A5','C105','ACCOUNT_TAKEOVER','HIGH',20000,'GBP','2026-04-14 06:00:00','NEW','John'),
+                      ('A6','C106','STRUCTURING','MEDIUM',15000,'GBP','2026-04-13 05:00:00','UNDER_REVIEW','Alice'),
+                      ('A7','C107','APP_SCAM','LOW',1200,'GBP','2026-04-12 04:00:00','ESCALATED','Bob'),
+                      ('A8','C108','SANCTIONS_HIT','HIGH',95000,'GBP','2026-04-11 03:00:00','CLOSED','Eve'),
+                      ('A9','C109','UNUSUAL_ACTIVITY','MEDIUM',6000,'GBP','2026-04-10 02:00:00','NEW','John'),
+                      ('A10','C110','ACCOUNT_TAKEOVER','HIGH',30000,'GBP','2026-04-09 01:00:00','UNDER_REVIEW','Alice'),
+
+                      ('A11','C101','STRUCTURING','LOW',700,'GBP','2026-04-08 10:00:00','ESCALATED','Bob'),
+                      ('A12','C102','APP_SCAM','HIGH',45000,'GBP','2026-04-07 09:00:00','CLOSED','Eve'),
+                      ('A13','C103','SANCTIONS_HIT','MEDIUM',18000,'GBP','2026-04-06 08:00:00','NEW','John'),
+                      ('A14','C104','UNUSUAL_ACTIVITY','LOW',900,'GBP','2026-04-05 07:00:00','UNDER_REVIEW','Alice'),
+                      ('A15','C105','ACCOUNT_TAKEOVER','HIGH',125000,'GBP','2026-04-04 06:00:00','ESCALATED','Bob'),
+                      ('A16','C106','STRUCTURING','MEDIUM',22000,'GBP','2026-04-03 05:00:00','CLOSED','Eve'),
+                      ('A17','C107','APP_SCAM','LOW',1100,'GBP','2026-04-02 04:00:00','NEW','John'),
+                      ('A18','C108','SANCTIONS_HIT','HIGH',99000,'GBP','2026-04-01 03:00:00','UNDER_REVIEW','Alice'),
+                      ('A19','C109','UNUSUAL_ACTIVITY','MEDIUM',8000,'GBP','2026-03-31 02:00:00','ESCALATED','Bob'),
+                      ('A20','C110','ACCOUNT_TAKEOVER','LOW',1500,'GBP','2026-03-30 01:00:00','CLOSED','Eve');
