@@ -1,10 +1,10 @@
 package com.lloyd.alerts.repository;
 
-import com.lloyd.alerts.entity.Alerts;
+import com.lloyd.alerts.entity.Alert;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AlertRepository extends JpaRepository<Alerts, String>,JpaSpecificationExecutor<Alerts> {
+public interface AlertRepository extends JpaRepository<Alert, String>,JpaSpecificationExecutor<Alert> {
 }

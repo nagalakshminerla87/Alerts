@@ -1,4 +1,4 @@
-INSERT INTO alerts VALUES
+INSERT INTO alert VALUES
                       ('A1','C101','STRUCTURING','HIGH',12000,'GBP','2026-04-18 10:00:00','NEW','John'),
                       ('A2','C102','APP_SCAM','MEDIUM',5000,'GBP','2026-04-17 09:00:00','UNDER_REVIEW','Alice'),
                       ('A3','C103','SANCTIONS_HIT','HIGH',75000,'GBP','2026-04-16 08:00:00','ESCALATED','Bob'),
